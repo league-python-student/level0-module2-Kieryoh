@@ -5,9 +5,22 @@ if __name__ == '__main__':
     window = Tk()
     window.withdraw()
 
-    random_number = random.randint(1, 5)
 
-    print(random_number)
+    for i in range(10):
+        random_number = random.randint(1, 5)
+
+        print(random_number)
+
+        if random_number == 1:
+            messagebox.showinfo(message='You rock!')
+        elif random_number == 2:
+            messagebox.showinfo(message='You shine!')
+        elif random_number == 3:
+            messagebox.showinfo(message="You're a star! :D")
+        elif random_number == 4:
+            messagebox.showinfo(message='e')
+        elif random_number == 5:
+            messagebox.showinfo(message='s')
 
     # TODO 1) Use each value of random_number to give the user a random compliment
 
