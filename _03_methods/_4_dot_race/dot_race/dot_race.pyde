@@ -11,15 +11,27 @@ can_play_sounds = False
 def setup():
     size(800, 200)
     global x
+    global dir
 
     # 1. Set the variable named x to 50.
+    x = 50
+    dir = 1
 
 def draw():
     background(200, 200, 200)
     global x
+    global dir
     
     # 2. Draw an ellipse of height and width 50. Make sure to use the x variable
     # for its X position. Pick a y value that places it half way down the window.
+    fill('#000000')
+    ellipse(x, 100, 50, 50)
+    
+    if mousePressed:
+        x += 1.2 * dir
+    if x > width or x < 0:
+        dir *= -1
+        
     
     # 3. Fill in the ellipse with a nice color. Remember to put it above the code
     # where you draw the ellipse.

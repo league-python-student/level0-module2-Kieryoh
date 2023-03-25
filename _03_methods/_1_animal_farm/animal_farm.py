@@ -1,7 +1,6 @@
 import tkinter as tk
-from tkinter import simpledialog, Tk
+from tkinter import messagebox, simpledialog, Tk
 from PIL import Image, ImageTk
-from playsound import playsound
 
 window = None
 
@@ -13,6 +12,21 @@ def animals():
 
     # TODO 1. Ask the user which animal they want, then see and
     #  hear the animal they chose using one of the methods below.
+    while True:
+        animal = simpledialog.askstring(title='animal', prompt='What animal do you want?')
+
+        if animal == 'cow':
+            moo()
+        elif animal == 'duck':
+            quack()
+        elif animal == 'dog':
+            woof()
+        elif animal == 'cat':
+            meow()
+        elif animal == 'llama':
+            llama_scream()
+        elif animal == 'exit':
+            break
 
     # TODO 2. Make it so that the user can keep entering new animals.
 
@@ -47,27 +61,27 @@ def show_image(filename=None):
 
 def moo():
     show_image('cow.jpg')
-    playsound('moo.wav')
+    messagebox.showinfo(message='Moo!')
 
 
 def quack():
     show_image('duck.jpg')
-    playsound('quack.wav')
+    messagebox.showinfo(message='Quack!')
 
 
 def woof():
     show_image('dog.jpg')
-    playsound('woof.wav')
+    messagebox.showinfo(message='Woof!')
 
 
 def meow():
     show_image('cat.jpg')
-    playsound('meow.wav')
+    messagebox.showinfo(message='Meow!')
 
 
 def llama_scream():
     show_image('llama.jpg')
-    playsound('llama.wav')
+    messagebox.showinfo(message='AAAAAAAA')
 
 
 if __name__ == '__main__':

@@ -17,7 +17,7 @@ def draw():
     
     # fill() sets the color. In this case, it's Blue
     # You can create custom colors using Tools->Color Selector
-    fill('#0000FF')
+    fill('#FFFFFF')
 
     # ellipse() draws an ellipse that follows the mouse position
     # (mouseX and mouseY) with the following inputs:
@@ -27,8 +27,12 @@ def draw():
     # The code below checks of the mouse was pressed and draws
     # a red ellipse over the blue one
     if mousePressed:
-        fill('#FF0000')
-        ellipse(mouseX, mouseY,  100,   100)
+        fill('#2402B2')
+        ellipse(mouseX, mouseY,  50,   50)
+        fill('#000000')
+        rect(mouseX-12.5, mouseY-12.5,  25,   25)
+        fill('#FFFFFF')
+        ellipse(mouseX-10, mouseY-6, 10,   6)
         
 
     # TODO: Add some other shapes with different sizes and colors

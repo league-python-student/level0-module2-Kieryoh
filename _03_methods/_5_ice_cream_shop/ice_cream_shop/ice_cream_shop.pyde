@@ -8,7 +8,13 @@ def setup():
      
     # Call the make_ice_cream_cone() function below to draw the cone for
     # your ice cream
-
+    make_ice_cream_cone()
+    add_scoop('chocolate')
+    add_scoop('strawberry')
+    add_scoop('vanilla')
+    add_sprinkle(30)
+    fill('#FF0000')
+    ellipse(250, 50, 50, 50)
     # Use the add_scoop() function below to add as many scoops of ice cream
     # as you want. Choose a different flavor for each scoop.
 
